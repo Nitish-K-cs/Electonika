@@ -51,4 +51,9 @@ public class ProductService {
 
         repo.save(updatedProduct);
     }
+
+    public void deleteProduct(int id) {
+        // products.removeIf(product -> product.getProdId() == id);
+        repo.deleteById(id);
+    }
 }
