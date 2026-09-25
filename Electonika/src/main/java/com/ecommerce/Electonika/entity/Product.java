@@ -2,10 +2,24 @@ package com.ecommerce.Electonika.entity;
 
 import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 @Component 
+@Entity
+@Table(name = "product")
 public class Product {
+
+    @Id 
+    @Column(name = "prod_id")
     private int prodId;
+
+    @Column(name = "prod_name")
     private String prodName;
+    
+    @Column(name = "prod_price")
     private double prodPrice;
 
     public Product(int prodId, String prodName, double prodPrice) {
